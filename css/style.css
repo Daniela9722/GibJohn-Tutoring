@@ -1,0 +1,38 @@
+/*Any style added to this will affect all the pages*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#navigation-container{
+    /*This will fix the navigation so that when the user
+    scrolls the navigation stays on the screen*/
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    /*Displays the elements horizontally*/
+    flex-direction: row;
+    align-items: center;
+    /*The gap between the navigation elements and the side of the page*/
+    justify-content: space-around;
+    background-color: white;
+    /*Ensures that the navigation is at the top of all the elements*/
+    z-index: 1000;
+}
+
+/*Changes the size of the logo*/
+#navigation-logo{
+    height: 8em;
+    width: 18em;
+}
+
+#navigation-links{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    font-size: 18px;
+}

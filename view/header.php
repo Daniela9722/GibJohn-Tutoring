@@ -1,5 +1,5 @@
 <?php
-    include('/core/spec.php');
+    include('C:/Users/335364/OneDrive - Milton Keynes College O365/GibJohn Tutoring/core/spec.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@
     <nav id="navigation-container">
         <a href="index.php"><img id="navigation-logo" src="/static/202129597-removebg-preview.png"></a>
             <ul id="navigation-links">
-                <li><a class="nav-links active" href="index.php"><i style="font-weight: bold; font-size: 18px;" class="bx bx-home"></i></b></li>
+                <li><a class="nav-links" href="index.php"><i style="font-weight: bold; font-size: 18px;" class="bx bx-home"></i></b></li>
                 <li><a class="nav-links" href="/view/about-us.php">About Us</a></li>
                 <li><a class="nav-links" href="/view/contact-us.php">Contact Us</a></li>
                 <li><a id="sign-in-link" href="/view/sign-in.php">Sign In</a></li>

@@ -5,6 +5,8 @@
     font-family: sans-serif;
 }
 
+/*************************** Menu Navigation *********************************/
+
 #navigation-container{
     /*This will fix the navigation so that when the user
     scrolls the navigation stays on the screen*/
@@ -20,19 +22,56 @@
     background-color: white;
     /*Ensures that the navigation is at the top of all the elements*/
     z-index: 1000;
+    box-shadow: 0px 7px 4px rgba(83, 83, 83, 0.7);
 }
 
 /*Changes the size of the logo*/
 #navigation-logo{
-    height: 8em;
-    width: 18em;
+    height: 4em;
+    width: 14em;
 }
 
 #navigation-links{
-    text-decoration: none;
+    /*Removes the dots from the list items*/
     list-style-type: none;
     display: flex;
+    /*Arranges the items horizontally*/
     flex-direction: row;
-    gap: 13px;
+    /*Adds a gap between the list items*/
+    gap: 1.3em;
+    /*Increases the size of the text*/
     font-size: 18px;
+}
+
+.nav-links{
+    /*Removes the underline of the text*/
+    text-decoration: none;
+    /*Change the colour of the text*/
+    color: black;
+    /*Make the text bold*/
+    font-weight: bold;
+    /*Makes smoother transition between colours, within 1ms*/
+    transition: 1ms ease;
+}
+
+/*Changes the colour of the menu items when hovered*/
+.nav-links:hover{
+    color: #0077CC;
+}
+
+#sign-in-link{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 7px;
+    background-color: #109bff;
+}
+
+#sign-up-link{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: #9FC9E7;
 }

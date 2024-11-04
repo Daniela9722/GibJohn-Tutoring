@@ -9,14 +9,14 @@
             // Connects to the database
             $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
-            // The "connection_error" method will return the error to the screen
+            // The "connect_error" method will return the error to the screen
             // and so will display a blank new page instead of showing
             // the error message at the top of the, e.g., homepage
-            if($conn->connection_error)
+            if($conn->connect_error)
             {
                 // die() function will display a message to the screen
                 // and then terminate the surrent script (same as exit() function)
-                die("<h1>Database Connection Failed</h1>");
+                die("Database Connection Failed: " . $conn->connect_error);
             }
             else
             {

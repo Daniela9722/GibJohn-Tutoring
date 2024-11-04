@@ -18,9 +18,12 @@
                 // and then terminate the surrent script (same as exit() function)
                 die("<h1>Database Connection Failed</h1>");
             }
-            // $this is used to refer to  the current object of the class,
-            // then using object operator "->" a properties or methods can be accessed
-            return $this->conn = $conn;
+            else
+            {
+                // $this is used to refer to  the current object of the class,
+                // then using object operator "->" a properties or methods can be accessed
+                return $this->conn = $conn;
+            }
         }
     }
 ?>

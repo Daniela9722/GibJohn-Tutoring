@@ -1,3 +1,4 @@
 <?php
-    include "header.php";
+    //Includes the navigation
+    include "nav.php";
 ?>

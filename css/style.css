@@ -7,10 +7,7 @@
 
 /*************************** Menu Navigation *********************************/
 
-#navigation-container{
-    /*This will fix the navigation so that when the user
-    scrolls the navigation stays on the screen*/
-    position: fixed;
+#navigation-container-1{
     width: 100vw;
     height: auto;
     display: flex;
@@ -25,10 +22,25 @@
     box-shadow: 0px 7px 4px rgba(83, 83, 83, 0.7);
 }
 
+#navigation-container-2{
+    width: 100vw;
+    height: auto;
+    display: none;
+    /*Displays the elements horizontally*/
+    flex-direction: row;
+    align-items: center;
+    /*The gap between the navigation elements and the side of the page*/
+    justify-content: space-around;
+    background-color: white;
+    /*Ensures that the navigation is at the top of all the elements*/
+    z-index: 1000;
+    box-shadow: 0px 7px 4px rgba(83, 83, 83, 0.7);
+}
+
 /*Changes the size of the logo*/
 #navigation-logo{
     height: 4em;
-    width: 14em;
+    width: 15em;
 }
 
 #navigation-links{
@@ -59,19 +71,223 @@
     color: #0077CC;
 }
 
+
+/*Designes the sign in button of the navigation menu*/
 #sign-in-link{
     color: black;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
-    padding: 7px;
+    /*The 1st value is the top and bottom padding, and the 2nd value is the right and left padding*/
+    padding: 10px 20px;
     background-color: #109bff;
 }
 
+/*Designes the sign up button of the navigation*/
 #sign-up-link{
     color: black;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
+    /*The 1st value is the top and bottom padding, and the 2nd value is the right and left padding*/
+    padding: 10px 20px;
     background-color: #9FC9E7;
+}
+
+/*Prevents the checkbox from beeing displayed*/
+#toggler{
+    display: none;
+}
+
+/*Change the size of the menu icon*/
+.bx-menu{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/*Change the colour of the menu icon when active and hovered*/
+.bx-menu:hover,
+.bx-menu.active{
+    color: #109bff;
+}
+
+/*Changes the layout of the menu items and makes a blury background*/
+.menu-list{
+    display: none;
+    position:fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    list-style-type: none;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    /*Makes the background blury*/
+    backdrop-filter: blur(10px);
+    /*Adds a shadow on the left side of the navigation*/
+    box-shadow: -7px 0 7px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 13px;
+    padding-top: 20px;
+}
+
+/*Changes the colour of the text, adn removes the underline*/
+.menu-list a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Creates a gap between the menu items and the left side of the navigation*/
+.menu-list li{
+    transform: translateX(10px);
+}
+
+/*Changes the colour of the text when hovered*/
+.menu-list a:hover{
+    color: #109bff;
+}
+
+/*Prevents the checkbox from beeing displayed for the "X"*/
+#check{
+    display: none;
+}
+
+/*Changes the size and prevents "X" from being diaplyed unless the menu icon
+has been clicked on*/
+.bx-x{
+    font-size: 3em;
+    cursor: pointer;
+    gap: 10px;
+    display: none;
+}
+
+
+/*Changes the colour of the "X" when hovered and when it is active*/
+.bx-x:hover,
+.bx-x.active{
+    color: #109bff;
+}
+
+
+/************************** Homepage ************************/
+
+
+/*Defines the height of the header, and centers the elements*/
+#homepage-header{
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+}
+
+#homepage-header-left{
+    display: flex;
+    /*Sets the width of the text in the header*/
+    flex: 40%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    padding-left: 7%;
+}
+
+
+#homepage-header-left a{
+    border-radius: 30px;
+    /*Sets the padding for the top, bottom, righ. left of the text and the background*/
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: #9fc9e7;
+    /*Sets the width of the button*/
+    width: 5.5em;
+    /*Centers the text for the CTA button*/
+    text-align: center;
+    /*Defines the type of cursor*/
+    cursor: pointer;
+}
+
+/*Sets the width for the image of the header*/
+#homepage-header-right{
+    display: flex;
+    flex: 60%;
+}
+
+/*Changes the size of the image*/
+#homepage-header-right img{
+    width: 100%;
+    height: auto;
+}
+
+#attract-users{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*************************Responsive Design**************************/
+
+
+/*Changes design of the software if the screen size is within the boundary, e.g., mobile phone*/
+@media only screen and (min-width: 320px) and (max-width: 640px){
+    /*Removes the navigation that displays the items on its own
+    and the image of the header*/
+    #navigation-container-1, #homepage-header-right{
+        display: none;
+    }
+
+    /*Displays a new navigation which includes a menu icon*/
+    #navigation-container-2{
+        display: flex;
+    }
+
+    /*Changes the size of the logo*/
+    #navigation-logo{
+        height: 3em;
+        width: 13em;
+    }
+
+    /*Adds a background image, so that the whole header is not in white colour
+    which will then blend with the navigation*/
+    #homepage-header{
+        background-image: url("/static/glasses-1052010_640.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        filter: brightness(85%);
+        color: white;
+    }
+}
+
+/*Changes design for a bit bigger sized screens, e.g., tablets*/
+@media only screen and (min-width: 641px) and (max-width: 960px){
+    /*Prevents the original navigation from beeing displayed*/
+    #navigation-container-1{
+        display: none;
+    }
+
+    /*Displays the navigation with the manu icon*/
+    #navigation-container-2{
+        display: flex;
+    }
+
+    /*Changes the size of the logo*/
+    #navigation-logo{
+        height: 3em;
+        width: 13em;
+    }
+}
+
+/*Changes design for even larger screen sizes, e.g., desktop*/
+@media only screen and (min-width: 961px){
+    /*Prevents the navigation menu with the menu icon from beeing displayed*/
+    #navigation-conatiner-2{
+        display: none;
+    }
 }

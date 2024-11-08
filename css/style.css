@@ -223,10 +223,129 @@ has been clicked on*/
     height: auto;
 }
 
+/*Arranges text and colours the background beige*/
 #attract-users{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #109bff;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+/*Changes the text design*/
+#attract-users span{
+    font-weight: bold;
+    color: black;
+    font-size: 2em;
+}
+
+/*Creates a "benefits" section*/
+#what-we-offer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 10em;
+    align-items: center;
+}
+
+/*Left side of the benefits section*/
+#what-we-offer-img{
+    display: flex;
+    /*This will take up 30% of the width*/
+    flex: 30%;
+}
+
+/*Right side of the benefits section*/
+#what-we-offer-text{
+    display: flex;
+    /*This will take up 70% of the width*/
+    flex: 70%;
+    flex-direction: column;
+    gap: 5em;
+}
+
+/*Specifies the size of the image in benefits section*/
+#what-we-offer-img img{
+    height: 57em;
+    width: 56em;
+}
+
+/*Prevents image from beeing displayed*/
+#benefit-image-2{
+    display: none;
+}
+
+/*Prevents image from beeing displayed*/
+#benefit-image-3{
+    display: none;
+}
+
+/*Prevents image from beeing displayed*/
+#benefit-image-4{
+    display: none;
+}
+
+/*Separates the benefits sections into two rows*/
+#what-we-offer-top,
+#what-we-offer-bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+
+/*Specifies the size and border colour of benefit section*/
+.benefit-1{
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 5em 5em;
+    height: 10em;
+    width: 20em;
+}
+
+/*Specifies the size and border colour of benefit section*/
+.benefit-2{
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 5em 5em;
+    height: 10em;
+    width: 20em;
+}
+
+/*Specifies the size and border colour of benefit section*/
+.benefit-3{
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 5em 5em;
+    height: 10em;
+    width: 20em;
+}
+
+/*Specifies the size and border colour of benefit section*/
+.benefit-4{
+    /*Width, type, colour of the border*/
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 5em 5em;
+    height: 10em;
+    width: 20em;
+}
+
+/*Changes the colour of benefits section when hovered*/
+.benefit-1:hover,
+.benefit-2:hover,
+.benefit-3:hover,
+.benefit-4:hover{
+    background-color: #9FC9E7;
+}
+
+/*Changes the colour of the benefits sections when focused (clicked)*/
+.benefit-1:focus,
+.benefit-2:focus,
+.benefit-3:focus,
+.benefit-4:focus{
+    background-color: #109bff;
 }
 
 

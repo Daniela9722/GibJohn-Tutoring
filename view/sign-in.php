@@ -14,9 +14,11 @@
 
 </head>
 <body>
+    <!--Adds a title for the page-->
     <div id="sign-in-text">
         <h1>Sign In</h1>
     </div>
+    <!--Choice for the user to sign in as a student, tutor or parent-->
     <div id="sign-in-container">
         <div class="sign-in-choice">
             <img src="/static/rb_3291.png" alt="Student">
@@ -40,6 +42,7 @@
             </div>
         </div>
     </div>
+    <!--A back to home link that will send the user to the homepage-->
     <div id="back-to-home-link">
         <a class="back-to-home" href="index.php">BACK TO HOME</a>
     </div>

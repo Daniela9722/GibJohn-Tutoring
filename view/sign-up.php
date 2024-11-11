@@ -14,9 +14,11 @@
 
 </head>
 <body>
+    <!--Title for the page-->
     <div id="sign-up-text">
         <h1>Sign Up</h1>
     </div>
+    <!--Add the choice to sign up as a student, tutor or parent-->
     <div id="sign-up-container">
         <div class="sign-up-choice">
             <img src="/static/rb_3291.png" alt="Student">
@@ -40,6 +42,7 @@
             </div>
         </div>
     </div>
+    <!--Link to back to home that will send the user to the homepage-->
     <div id="back-to-home-link">
         <a class="back-to-home" href="index.php">BACK TO HOME</a>
     </div>

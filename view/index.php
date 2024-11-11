@@ -1,6 +1,6 @@
 <?php
     //Includes the file that connects to the database
-    include('C:/Users/335364/OneDrive - Milton Keynes College O365/GibJohn Tutoring/core/spec.php');
+    include('C:/Users/Daniela/Documents/GibJohn Tutoring/GibJohn-Tutoring/core/spec.php');
     //Includes the navigation
     require "nav.php";
 ?>
@@ -68,8 +68,45 @@
         </div>
     </div>
 
+    <div id="about-us-section">
+        <h1>About Us</h1>
+        <p>Some text describing what GibJohn offers</p>
+    </div>
+
+    <div id="faq">
+        <div id="faq-top">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <div id="faq-bottom">
+            <details>
+                <summary>Which tutor is right for you?<i class='bx bx-chevron-up'></i></summary>
+                <p>Before you look for a tutor, it's helpful to have a really clear idea of exactly where your child needs help - whether with a specific English Literature text, one area of Maths or their exam technique - and filter your choices accordingly. If you're not sure where they need to focus, having a chat with them or their teacher can help you work out the best place to start. In a free meeting, you can then ask the tutor any questions you like and see how well they get on with your child before deciding to book.</p>
+            </details>
+            <details>
+                <summary>Why is online tutoring important?<i class='bx bx-chevron-up'></i></summary>
+                <p>Online tutoring gives kids the chance to learn at their own pace and in a way that matches their learning style. Teens are often too shy to put their hand up in class - especially if they're struggling. The reassurance of one-to-one tutoring means they can ask all the questions they want, and go over topics as much as they need until they get it.</p>
+            </details>
+            <details>
+                <summary>What are the benefits of online tutoring?<i class='bx bx-chevron-up'></i></summary>
+                <p>One-to-one tutoring lets kids unleash their potential. Worried about learning gaps? We'll fill them in. No tutors in your area? We've got you covered. No academic confidence? No problem. Whatever your child needs help with, their tutor will guide them through tricky topics and boost their self-belief. With the personalised one-to-one support from their tutor, your child can get the grades they deserve.</p>
+            </details>
+            <details>
+                <summary>How much does a tutor cost?<i class='bx bx-chevron-up'></i></summary>
+                <p>Our tutors set their own prices based on their experience and qualifications, starting from £25/hour at GCSE level. Most of our tutors charge between £25 and £39 an hour. </p>
+            </details>
+            <details>
+                <summary>How do online lessons work?<i class='bx bx-chevron-up'></i></summary>
+                <p>We have our own online lesson space with video chat, messaging and an interactive whiteboard - this makes it easy for students and tutors to talk to each other, discuss tricky concepts and do practice questions together. With the live video chat, they can have a natural back-and-forth conversation - just like on FaceTime, Whatsapp and other apps teens use all the time.</p>
+            </details>
+        </div>
+    </div>
+
     <!--Links to the JavaScript file-->
     <script src="/js/myScript.js"></script>
+
+<?php
+    include "footer.php";
+?>
 
 </body>
 </html>

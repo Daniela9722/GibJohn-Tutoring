@@ -6,9 +6,13 @@
 </head>
 <body>
     <footer id="footer-container">
+        <!--First part of the footer-->
         <div>
             <p>© 2024 GibJohn Tutoring. All rights reserved.</p>
         </div>
+        <!--Second part of the footer, containing the links for some of the main 
+        information for the users to be aware of. This ensures the compliance with legislation
+        especially DPA-->
         <div id="footer-link-list">
             <a class="footer-link" href="">Terms and Conditions</a>
             <a class="footer-link" href="">Terms of Use</a>

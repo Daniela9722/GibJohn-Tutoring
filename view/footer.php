@@ -9,9 +9,9 @@
         <div>
             <p>© 2024 GibJohn Tutoring. All rights reserved.</p>
         </div>
-        <div>
-            <a href="">Terms and Conditions</a>
-            <a href="">Terms of Use</a>
+        <div id="footer-link-list">
+            <a class="footer-link" href="">Terms and Conditions</a>
+            <a class="footer-link" href="">Terms of Use</a>
             <a href="">Private Policy</a>
         </div>
     </footer>

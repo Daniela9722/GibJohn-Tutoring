@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!--Download document for the icons-->
-     <link rel="stylesheet"
-     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--Download document for the icons-->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
  
-     <!--Connects to the styles.css file-->
-     <link rel="stylesheet" href="/css/style.css">
+    <!--Connects to the styles.css file-->
+    <link rel="stylesheet" href="/css/style.css">
  
 </head>
 <body>

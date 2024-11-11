@@ -182,20 +182,26 @@ has been clicked on*/
     font-weight: bold;
     padding-top: 3em;
     padding-bottom: 3em;
+    /*Adds a shadow at the top of the page*/
     box-shadow: 0px -7px 7px rgba(0, 0, 0, 0.2);
 }
 
+/*Customise footer links*/
 #footer-container a{
     text-decoration: none;
     color: black;
 }
 
+/*Arranges the links within the footer in row*/
 #footer-link-list{
     display: flex;
     flex-direction: row;
     gap: 1em;
 }
 
+/*Separates the footer link with "|" */
+/*::after means that the content will be displayed after the text with the 
+specified class*/
 #footer-link-list .footer-link::after{
     content: "|";
     color: black;
@@ -387,9 +393,11 @@ has been clicked on*/
     justify-content: center;
     gap: 3em;
     height: 30em;
+    /*Adds a shadow at the top and bottom of the about us section*/
     box-shadow: 0px -7px 7px rgba(0, 0, 0, 0.2), 0px 7px 7px rgba(0, 0, 0, 0.2);
 }
 
+/*Customises the position of FAQ container*/
 #faq{
     display: flex;
     flex-direction: column;
@@ -402,47 +410,59 @@ has been clicked on*/
 
 #faq-bottom{
     height: auto;
+    /*Sets the size of the FAQ container to 50%, whcih ensures 
+    that the software is responsive to screen size*/
     width: 50%;
     padding-bottom: 3em;
 }
 
 #faq-bottom details{
+    /*Changes the color of the FAQ container*/
     background-color: #303030;
     color: #ffffff;
     font-size: 1.5rem;
+    /*Adds a shadow between the question sections*/
     box-shadow: 7px 0px 8px rgba(0, 0, 0, 0.4);
 }
 
+/*Customise the question section of the FAQ*/
 #faq-bottom summary{
     padding: .8em 1.5rem;
     font-weight: bold;
     list-style: none;
     display: flex;
     justify-content: space-between;
+    /*Adds transition when displaying the answers to the question
+    once the user clicks on the question*/
     transition: height 1s ease;
 }
 
+/*Changes the colour of the text and icon of the question section of the FAQ*/
 #faq-bottom summary:hover,
 #faq-bottom summary:focus{
     color: #9FC9E7;
 }
 
+/*Customise the icon size*/
 #faq-bottom summary i{
     font-size: 30px;
     font-weight: bold;
 }
 
+/*Customise the paragraph text size and the padding around it*/
 #faq-bottom p{
     padding: .8em 1.5rem;
     font-size: 20px;
 }
 
+/*Prevent the down pointing arrow type icon*/
 .bx-chevron-down{
     display: none;
 }
 
 /************************* Sign Up and Sign In *************************/
 
+/*Places the sign in and sign up title in the center (horizontally), and increases its size*/
 #sign-up-text,
 #sign-in-text{
     width: 100%;
@@ -455,6 +475,7 @@ has been clicked on*/
 
 #sign-up-container,
 #sign-in-container{
+    /*Sets the height of the sign in and sign up container*/
     height: (100vh - 20vh);
     display: flex;
     flex-direction: row;
@@ -462,17 +483,22 @@ has been clicked on*/
     align-items: center;
 }
 
+/*Sets the size of the images*/
 #sign-up-container img,
 #sign-in-container img{
     width: 35em;
     height: 35em;
 }
 
+/*Customises each sign in/up container*/
 .sign-up-choice,
 .sign-in-choice{
+    /*Sets a border around the sign in/up conatainer*/
     border: 2px solid rgb(75, 73, 73);
     border-radius: 20px;
+    /*Set a padding for the border and the image and text inside the border*/
     padding: 2em;
+    /*Adds a shadow around each container to enhance it*/
     box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2), -7px -7px 7px rgba(0, 0, 0, 0.2);
 }
 
@@ -491,17 +517,22 @@ has been clicked on*/
     color: black;
 }
 
+/*Customise the sing in and sign up buttons*/
 .sign-up-choice div a,
 .sign-in-choice div a{
     text-decoration: none;
     color: black;
+    /*Sets border radius to 30px*/
     border-radius: 30px;
+    /*Adds padding to the left, right, top and bottom*/
     padding: 10px 20px;
     background-color: #9FC9E7;
     font-weight: bold;
+    /*Centers the text in the biddle of its border*/
     text-align: center;
 }
 
+/*Customsie the "BACK TO HOME" link*/
 #back-to-home-link{
     width: 100%;
     height: 20vh;
@@ -511,8 +542,11 @@ has been clicked on*/
 }
 
 .back-to-home{
+    /*Sets the color for the "BACK TO HOME" link*/
     color: rgb(100, 100, 100);
+    /*Make the link text bold*/
     font-weight: bold;
+    /*Changes the sie of the link text*/
     font-size: 19px;
 }
 

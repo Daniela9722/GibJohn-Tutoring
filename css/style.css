@@ -68,7 +68,7 @@
 
 /*Changes the colour of the menu items when hovered*/
 .nav-links:hover{
-    color: #0077CC;
+    color: #165d89;
 }
 
 
@@ -81,6 +81,8 @@
     /*The 1st value is the top and bottom padding, and the 2nd value is the right and left padding*/
     padding: 10px 20px;
     background-color: #109bff;
+    /*Makes the transition between background colours smoother*/
+    transition: 0.5s ease;
 }
 
 /*Designes the sign up button of the navigation*/
@@ -92,7 +94,17 @@
     /*The 1st value is the top and bottom padding, and the 2nd value is the right and left padding*/
     padding: 10px 20px;
     background-color: #9FC9E7;
+    /*Makes the transition between background colours smoother*/
+    transition: 0.5s ease;
 }
+
+/*Change background color and text color of the sign in and sign up button*/
+#sign-up-link:hover,
+#sign-in-link:hover{
+    background-color: #165d89;
+    color: white;
+}
+
 
 /*Prevents the checkbox from beeing displayed*/
 #toggler{
@@ -549,6 +561,165 @@ specified class*/
     /*Changes the sie of the link text*/
     font-size: 19px;
 }
+
+
+/************************* Sign Up Students ***************************/
+
+.sign-logo{
+    /*The first value is how much the shadow should be to the left side,
+    the second how much it should be to the bottom, and the third is the blur*/
+    filter: drop-shadow(8px 7px 3px rgb(185, 174, 174));
+}
+
+.sign-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Positions the sign in/up form on the left side and takes up 40% of the width*/
+.sign-form{
+    height: 100vh;
+    display: flex;
+    flex: 40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+/*Positions the sign in/up form on the right and takes up 60% of the width*/
+.sign-image{
+    display: flex;
+    flex: 60%;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Changes the size of the image*/
+.sign-image img{
+    width: 80em;
+    height: 70em;
+}
+
+/*Add a line for the sign in and sign up text around the "OR" text*/
+.line-with-text{
+    text-align: center;
+    /*Adds the text*/
+    border-bottom: 1px solid #000000;
+    line-height: 0.1em;
+    /*Adds a margin at the top and bottom*/
+    margin: 10px 0 20px;
+}
+
+.line-with-text span{
+    /*Adds padding between "OR" text and line*/
+    padding: 0 10px;
+    background-color: #ffffff;
+}
+
+/*Customise the sign in/up with google button*/
+.sign-google{
+    border-radius: 30px;
+    height: 2.5em;
+    background-color: rgba(209, 209, 209, 0.5);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*Arranges the input fields in columns and adds a gap between each of them*/
+.sign-input-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/*Arranges each of the label and input pairs in columns and adds
+a gap between them*/
+.sign-input-fields div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/*Customise the label*/
+.input-field label{
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+
+/*Customise the input fiels*/
+.input-field input{
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    background: rgba(209, 209, 209, 0.5);
+    height: 2.3em;
+    transition: 0.7s ease;
+    padding: 3px 10px;
+    width: 35em;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*Adds a shadow around the curved input field/button
+and changes background colour when hovered or focused*/
+.input-field input:hover,
+.sign-google:hover,
+.sign-google:focus{
+    background-color: #e8f0fe;
+    filter: drop-shadow(8px 7px 2px rgb(185, 174, 174));
+}
+
+/*Adds a shadow, margin and changes background color when the user
+focuses (clicks) on the input field*/
+.input-field input:focus{
+    background-color: #e8f0fe;
+    filter: drop-shadow(8px 7px 2px rgb(185, 174, 174));
+    margin-bottom: 1em;
+}
+
+/*Customise the sign in and sign up buttons*/
+.sign-up-button,
+.sign-in-button{
+    height: 2.5em;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #165d89;
+    color: white;
+    filter: drop-shadow(8px 7px 2px rgb(185, 174, 174));
+    margin-top: 1.5em;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+/*Changes the background colour and text colour when the sign in or sign up button is hovered*/
+.sign-up-button:hover,
+.sign-in-button:hover{
+    background-color: #e8f0fe;
+    color: black;
+}
+
+/*Customises the text*/
+.have-an-account,
+.dont-have-an-account{
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+
+/*Customises the link text*/
+.sign-link-redirect{
+    text-decoration: none;
+    color: #165d89;
+}
+
 
 /************************* Responsive Design **************************/
 

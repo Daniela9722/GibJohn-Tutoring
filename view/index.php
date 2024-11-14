@@ -1,6 +1,6 @@
 <?php
     //Includes the file that connects to the database
-    include "C:/Users/335364/OneDrive - Milton Keynes College O365/GibJohn Tutoring/core/spec.php";
+    include "C:/Users/Daniela/Documents/GibJohn Tutoring/GibJohn-Tutoring/core/spec.php";
     //Includes the navigation
     require "nav.php";
 ?>

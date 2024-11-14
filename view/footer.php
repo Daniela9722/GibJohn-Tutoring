@@ -14,9 +14,9 @@
         information for the users to be aware of. This ensures the compliance with legislation
         especially DPA-->
         <div id="footer-link-list">
-            <a class="footer-link" href="">Terms and Conditions</a>
-            <a class="footer-link" href="">Terms of Use</a>
-            <a href="">Private Policy</a>
+            <span><a class="footer-link" href="">Terms and Conditions</a></span>
+            <span><a class="footer-link" href="">Terms of Use</a></span>
+            <span><a href="">Private Policy</a></span>
         </div>
     </footer>
 </body>

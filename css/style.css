@@ -294,9 +294,9 @@ specified class*/
 #what-we-offer{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     height: auto;
-    gap: 10em;
+    gap: 7em;
     align-items: center;
 }
 
@@ -304,14 +304,14 @@ specified class*/
 #what-we-offer-img{
     display: flex;
     /*This will take up 30% of the width*/
-    flex: 30%;
+    flex: 30vw;
 }
 
 /*Right side of the benefits section*/
 #what-we-offer-text{
     display: flex;
     /*This will take up 70% of the width*/
-    flex: 70%;
+    flex: 70vw;
     flex-direction: column;
     gap: 5em;
 }
@@ -420,11 +420,15 @@ specified class*/
     padding-bottom: 4em;
 }
 
+#faq-top{
+    text-align: center;
+}
+
 #faq-bottom{
     height: auto;
     /*Sets the size of the FAQ container to 50%, whcih ensures 
     that the software is responsive to screen size*/
-    width: 50%;
+    width: 90%;
     padding-bottom: 3em;
 }
 
@@ -754,6 +758,79 @@ focuses (clicks) on the input field*/
         filter: brightness(85%);
         color: white;
     }
+
+    #attract-users{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #attract-users span{
+        font-size: 1.5em;
+    }
+
+    #what-we-offer{
+        display: inline;
+    }
+
+    #what-we-offer-img img{
+        display: none;
+    }
+
+    #what-we-offer-text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        pointer-events: none;
+        gap: 1.5em;
+    }
+
+    #what-we-offer-top,
+    #what-we-offer-bottom{
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: center;
+    }
+
+    .benefit-1,
+    .benefit-2,
+    .benefit-3,
+    .benefit-4{
+        width: 40%;
+        height: 5em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+
+    #footer-container{
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+    }
+
+    #footer-link-list{
+        display: inline;
+        align-items: start;
+    }
+
+    #sign-up-container,
+    #sign-in-container{
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    /*Sets the size of the images*/
+    #sign-up-container img,
+    #sign-in-container img{
+        width: 17em;
+        height: 13em;
+    }
+
+    .sign-up-choice div,
+    .sign-in-choice div{
+        height: 17vh;
+        width: 20vw;
+    }
 }
 
 /*Changes design for a bit bigger sized screens, e.g., tablets*/
@@ -773,12 +850,133 @@ focuses (clicks) on the input field*/
         height: 3em;
         width: 13em;
     }
+
+    #attract-users{
+        justify-content: space-around;
+    }
+
+    #attract-users span{
+        font-size: 1.4em;
+    }
+
+    #what-we-offer{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #what-we-offer-img img{
+        width: 40em;
+        height: 40em;
+    }
+
+    #what-we-offer-text{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3em;
+        gap: 1.5em;
+    }
+
+    #what-we-offer-top,
+    #what-we-offer-bottom{
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .benefit-1,
+    .benefit-2,
+    .benefit-3,
+    .benefit-4{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+
+    #footer-container{
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+    }
+
+    #footer-link-list{
+        display: inline;
+        align-items: start;
+    }
 }
 
 /*Changes design for even larger screen sizes, e.g., desktop*/
-@media only screen and (min-width: 961px){
+@media only screen and (min-width: 961px) and (max-width: 1499px){
     /*Prevents the navigation menu with the menu icon from beeing displayed*/
     #navigation-conatiner-2{
         display: none;
+    }
+
+    #attract-users{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #attract-users span{
+        font-size: 1.4em;
+    }
+
+    #what-we-offer{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #what-we-offer-img img{
+        width: 55em;
+        height: 55em;
+    }
+
+    #what-we-offer-text{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3em;
+        gap: 1.5em;
+    }
+
+    #what-we-offer-top,
+    #what-we-offer-bottom{
+        flex-direction: row;
+        gap: 1.5em;
+    }
+
+    .benefit-1,
+    .benefit-2,
+    .benefit-3,
+    .benefit-4{
+        width: 40%;
+        height: 5em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+}
+
+/*Changes design for even larger screen sizes, e.g., desktop*/
+@media only screen and (min-width: 1500px){
+    #attract-users{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #what-we-offer-img img{
+        width: 53em;
+        height: 53em;
+    }
+
+    .benefit-1,
+    .benefit-2,
+    .benefit-3,
+    .benefit-4{
+        width: 15em;
+        height: 7em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2em;
     }
 }

@@ -79,7 +79,7 @@
                 </div>
 
                 <!--Button to submit the inputed data-->
-                <button class="sign-up-button" type="submit" name="sign-up">Sign Up</button>
+                <button class="sign-up-button" type="submit" name="parent-sign-up">Sign Up</button>
                 <!--Enables the user to go to the sign in page if they have an account, therefore improving UX-->
                 <p class="have-an-account">Have an account: <a class="sign-link-redirect" href="sign-in-parent.php">Sign In</a></p>
 

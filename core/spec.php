@@ -10,4 +10,8 @@
     include_once("connection.php");
     // Assigns the database connection to a variable
     $db = new connection;
+
+    function validateInput($dbcon, $input){
+        return mysqli_real_escape_string($dbcon, $input);
+    }
 ?>

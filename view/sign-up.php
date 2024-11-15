@@ -1,3 +1,6 @@
+<?php
+    include('../core/spec.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

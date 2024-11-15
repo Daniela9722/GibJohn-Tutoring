@@ -346,33 +346,9 @@ specified class*/
 }
 
 /*Specifies the size and border colour of benefit section*/
-.benefit-1{
-    border: 3px solid black;
-    border-radius: 20px;
-    padding: 5em 5em;
-    height: 10em;
-    width: 20em;
-}
-
-/*Specifies the size and border colour of benefit section*/
-.benefit-2{
-    border: 3px solid black;
-    border-radius: 20px;
-    padding: 5em 5em;
-    height: 10em;
-    width: 20em;
-}
-
-/*Specifies the size and border colour of benefit section*/
-.benefit-3{
-    border: 3px solid black;
-    border-radius: 20px;
-    padding: 5em 5em;
-    height: 10em;
-    width: 20em;
-}
-
-/*Specifies the size and border colour of benefit section*/
+.benefit-1,
+.benefit-2,
+.benefit-3,
 .benefit-4{
     /*Width, type, colour of the border*/
     border: 3px solid black;
@@ -380,6 +356,10 @@ specified class*/
     padding: 5em 5em;
     height: 10em;
     width: 20em;
+    /*Center the text*/
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
 }
 
 /*Changes the colour of benefits section when hovered*/
@@ -426,7 +406,7 @@ specified class*/
 
 #faq-bottom{
     height: auto;
-    /*Sets the size of the FAQ container to 50%, whcih ensures 
+    /*Sets the size of the FAQ container to 90%, whcih ensures 
     that the software is responsive to screen size*/
     width: 90%;
     padding-bottom: 3em;
@@ -491,8 +471,6 @@ specified class*/
 
 #sign-up-container,
 #sign-in-container{
-    /*Sets the height of the sign in and sign up container*/
-    height: (100vh - 20vh);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -524,6 +502,8 @@ specified class*/
     flex-direction: column;
     gap: 1em;
     align-items: center;
+    width: 35em;
+    height: 10em;
 }
 
 .sign-up-choice div h3,
@@ -567,7 +547,7 @@ specified class*/
 }
 
 
-/************************* Sign Up Students ***************************/
+/************************* Sign Up/In Students, Tutors and Parents ***************************/
 
 .sign-logo{
     /*The first value is how much the shadow should be to the left side,
@@ -654,7 +634,7 @@ a gap between them*/
     color: black;
 }
 
-/*Customise the input fiels*/
+/*Customise the input fields*/
 .input-field input{
     outline: none;
     border: none;
@@ -796,10 +776,6 @@ focuses (clicks) on the input field*/
     .benefit-4{
         width: 40%;
         height: 5em;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 0.2em;
     }
 
     #footer-container{
@@ -822,14 +798,30 @@ focuses (clicks) on the input field*/
     /*Sets the size of the images*/
     #sign-up-container img,
     #sign-in-container img{
-        width: 17em;
+        width: 15em;
         height: 13em;
     }
 
     .sign-up-choice div,
     .sign-in-choice div{
-        height: 17vh;
-        width: 20vw;
+        height: 6em;
+        width: 15em;
+    }
+
+    /*Removes the image from the sign in and sign up forms*/
+    .sign-image{
+        display: none;
+    }
+
+    /*Makes the logo smaller*/
+    .sign-logo{
+        width: 16em;
+        height: 5em;
+    }
+
+    /*Change the width of the input fields to fit within the screen size*/
+    .input-field input{
+        width: 17em;
     }
 }
 
@@ -882,16 +874,6 @@ focuses (clicks) on the input field*/
         gap: 1.5em;
     }
 
-    .benefit-1,
-    .benefit-2,
-    .benefit-3,
-    .benefit-4{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 0.2em;
-    }
-
     #footer-container{
         flex-direction: column;
         gap: 2em;
@@ -901,6 +883,29 @@ focuses (clicks) on the input field*/
     #footer-link-list{
         display: inline;
         align-items: start;
+    }
+
+    #sign-up-container,
+    #sign-in-container{
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    #sign-up-container img,
+    #sign-in-container img{
+        width: 22em;
+        height: 19em;
+    }
+
+    .sign-up-choice div,
+    .sign-in-choice div{
+        height: 7em;
+        width: 22em;
+    }
+
+    /*Removes the image from the sign in and sign up forms*/
+    .sign-image{
+        display: none;
     }
 }
 
@@ -949,15 +954,40 @@ focuses (clicks) on the input field*/
     .benefit-4{
         width: 40%;
         height: 5em;
-        display: flex;
-        justify-content: center;
+    }
+
+    #sign-up-container,
+    #sign-in-container{
         flex-direction: column;
-        gap: 0.2em;
+        gap: 3em;
+    }
+
+    #sign-up-container img,
+    #sign-in-container img{
+        width: 34em;
+        height: 31em;
+    }
+
+    .sign-up-choice div,
+    .sign-in-choice div{
+        height: 7em;
+        width: 34em;
+    }
+
+    /*Change the size of the image so that it fits within the screen*/
+    .sign-image img{
+        height: 50em;
+        width: 50em;
+    }
+
+    /*Change the width of the input fields to fit within the screen size*/
+    .input-field input{
+        width: 30em;
     }
 }
 
 /*Changes design for even larger screen sizes, e.g., desktop*/
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 1500px) and (max-width: 2099px){
     #attract-users{
         justify-content: space-evenly;
         align-items: center;
@@ -974,9 +1004,39 @@ focuses (clicks) on the input field*/
     .benefit-4{
         width: 15em;
         height: 7em;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 0.2em;
+    }
+
+    #sign-up-container,
+    #sign-in-container{
+        justify-content: space-evenly;
+    }
+
+    #sign-up-container img,
+    #sign-in-container img{
+        width: 25em;
+        height: 22em;
+        flex: 1;
+    }
+
+    .sign-up-choice div,
+    .sign-in-choice div{
+        height: 7em;
+        width: 25em;
+        flex: 1;
+    }
+
+    .sign-container{
+        padding-left: 2em;
+    }
+
+    /*Change the size of the image so that it fits within the screen*/
+    .sign-image img{
+        height: 50em;
+        width: 60em;
+    }
+
+    /*Change the width of the input fields to fit within the screen size*/
+    .input-field input{
+        width: 37em;
     }
 }

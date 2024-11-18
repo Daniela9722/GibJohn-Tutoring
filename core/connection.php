@@ -1,29 +1,26 @@
 <?php
-    // Creates a class
-    class connection
-    {
-        // Creates a method that will connect to the database
-        // and check the connection
-        public function __construct()
-        {
-            // Connects to the database
-            $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
-            // The "connect_error" method will return the error to the screen
-            // and so will display a blank new page instead of showing
-            // the error message at the top of the, e.g., homepage
-            if($conn->connect_error)
-            {
-                // die() function will display a message to the screen
-                // and then terminate the surrent script (same as exit() function)
-                die("Database Connection Failed: " . $conn->connect_error);
+    class DatabaseConnection{
+
+        protected function connection(){
+            //Tries to run the code, however if it cathes an error it will display the error instead
+            try{
+                $username = "root";
+                $password = "";
+                //Using PDO provides higher level of security, and so protects from SQL injections
+                //Creates a connection with the database
+                $dbh = new PDO("mysql:host=localhost;dbname=gibjohn tutoring", $username, $password);
+                //Returns the connection if successful
+                return $dbh;
             }
-            else
-            {
-                // $this is used to refer to  the current object of the class,
-                // then using object operator "->" a properties or methods can be accessed
-                return $this->conn = $conn;
+            //If the connection is unsuccessful it will get the error message and then display it.
+            catch(PDOException $error){
+                //getMessage function takes the error that the $error variable gets
+                //and the die function then kills the connection
+                print "Error!: " . $error->getMessage() . "<br/>";
+                die();
             }
         }
     }
+
 ?>

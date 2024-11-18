@@ -47,14 +47,14 @@
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="date-of-birth">Date of Birth</label>
-                    <input type="date" id="date-of-birth" name="date of birth">
+                    <input type="date" id="date-of-birth" name="date-of-birth">
                 </div>
 
                 <!--Input field for email address-->
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="email-address">Email Address</label>
-                    <input type="email" id="email-address" name="email adress">
+                    <input type="email" id="email-address" name="email-address">
                 </div>
 
                 <!--Input field for password-->
@@ -68,11 +68,11 @@
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="re-password">Re-enter Password</label>
-                    <input type="password" id="re-password" name="repeated password">
+                    <input type="password" id="re-password" name="repeated-password">
                 </div>
 
                 <!--Button to submit the inputed data-->
-                <button class="sign-up-button" type="submit" name="sign-up">Sign Up</button>
+                <button class="sign-up-button" type="submit" name="tutor-sign-up">Sign Up</button>
                 <!--Enables the user to go to the sign in page if they have an account, therefore improving UX-->
                 <p class="have-an-account">Have an account? <a class="sign-link-redirect" href="sign-in-tutor.php">Sign In</a></p>
 

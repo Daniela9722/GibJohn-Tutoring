@@ -18,6 +18,7 @@
     <div class="sign-container">
         <div class="sign-form">
             <div>
+                <!--Adds the logo-->
                 <a href="index.php"><img class="sign-logo" src="/static/202129597-removebg-preview.png" alt="Logo"></a>
             </div>
             <h1>Parent Sign Up</h1>
@@ -47,21 +48,21 @@
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="date-of-birth">Date of Birth</label>
-                    <input type="date" id="date-of-birth" name="date of birth">
+                    <input type="date" id="date-of-birth" name="date-of-birth">
                 </div>
 
                 <!--Input field for email address-->
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="email-address">Email Address</label>
-                    <input type="email" id="email-address" name="email adress">
+                    <input type="email" id="email-address" name="email-address">
                 </div>
 
                 <!--Input field for student account email address-->
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="student-email-address">Linked Student Email Address</label>
-                    <input type="email" id="student-email-address" name="student email adress">
+                    <input type="email" id="student-email-address" name="student-email-address">
                 </div>
 
                 <!--Input field for password-->
@@ -75,7 +76,7 @@
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="re-password">Re-enter Password</label>
-                    <input type="password" id="re-password" name="repeated password">
+                    <input type="password" id="re-password" name="repeated-password">
                 </div>
 
                 <!--Button to submit the inputed data-->

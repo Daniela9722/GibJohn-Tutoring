@@ -22,6 +22,7 @@
     <div class="sign-container">
         <div class="sign-form">
             <div>
+                <!--Adds the logo-->
                 <a href="index.php"><img class="sign-logo" src="/static/202129597-removebg-preview.png" alt="Logo"></a>
             </div>
             <h1>Student Sign Up</h1>
@@ -58,7 +59,7 @@
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="email-address">Email Address</label>
-                    <input type="email" id="email-address" name="email-adress">
+                    <input type="email" id="email-address" name="email-address">
                 </div>
 
                 <!--Input field for password-->

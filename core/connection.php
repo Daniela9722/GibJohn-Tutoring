@@ -1,28 +1,25 @@
 <?php
     // Creates a class
-    class connection
+    class DatabaseConnection
     {
-        // Creates a method that will connect to the database
-        // and check the connection
-        public function __construct()
+        protected function connection()
         {
-            // Connects to the database
-            $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-            // The "connect_error" method will return the error to the screen
-            // and so will display a blank new page instead of showing
-            // the error message at the top of the, e.g., homepage
-            if($conn->connect_error)
-            {
-                // die() function will display a message to the screen
-                // and then terminate the surrent script (same as exit() function)
-                die("Database Connection Failed: " . $conn->connect_error);
+            try{
+                //Credentials required to connect to the database
+                $username = "root";
+                $password = "";
+                //Connect to the database
+                $dbh = new PDO("mysql:host=localhost;dbname=gibjohn tutoring", $username, $password);
+                //return the database connection
+                return $dbh;
             }
-            else
-            {
-                // $this is used to refer to  the current object of the class,
-                // then using object operator "->" a properties or methods can be accessed
-                return $this->conn = $conn;
+            //An error will be displayed if the connection is unsuccessful
+            //The variable "error" will store the error message and the "getMessage()" build in
+            //function will take that error message
+            //The die() build in function will end the code 
+            catch(PDOException $error){
+                print "Error!: " . $error->getMessage() . "<br/>";
+                die();
             }
         }
     }

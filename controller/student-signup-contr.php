@@ -1,13 +1,11 @@
 <?php
-    include('../core/spec.php');
+    class signupStudentContr{ 
 
-    class signupStudent{ 
-
-        public function checkUser($emailAddress){
+        public function checkUser($email){
             //Selects all the data where the email is the same as the entered email
         $stmt = $db->conn->prepare("SELECT * FROM registered_students WHERE email = ?");
 
-            if(!$stmt->execute($emailAddress)){
+            if(!$stmt->execute($email)){
                 //Prevent the rest of the code from being executed
                 $stmt = null;
                 //Redirects the user to the homepage
@@ -29,13 +27,13 @@
             return $resultCheck;
         }
 
-        public function setStudent($forename, $surname, $dateOfBirth, $emailAddress, $password){
+        public function setStudent($forename, $surname, $dateOfBirth, $email, $password){
             //Selects all the data where the email is the same as the entered email
             $stmt = $db->conn->prepare("INSERT INTO regitered_students (forename, surname, dateOfBirth, email, password) VALUES (?, ?, ?, ?, ?)");
         
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            if(!$stmt->execute(array($forename, $surname, $dateOfBirth, $emailAddress, $hashedPassword))){
+            if(!$stmt->execute(array($forename, $surname, $dateOfBirth, $email, $hashedPassword))){
                 $stmt = null;
                 header('location: ../view/index.php?error=stmtfailed');
                 exit();
@@ -45,3 +43,5 @@
             $stmt = null;
         }
     }
+
+?>

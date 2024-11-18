@@ -16,6 +16,7 @@
     <div class="sign-container">
         <div class="sign-form">
             <div>
+                <!--Adds the logo-->
                 <a href="index.php"><img class="sign-logo" src="/static/202129597-removebg-preview.png" alt="Logo"></a>
             </div>
             <h1>Tutor Sign In</h1>
@@ -31,7 +32,7 @@
                 <div class="input-field">
                     <!--Adds a label for the input field for accessibility (when using screen readers)-->
                     <label for="email-address">Email Address</label>
-                    <input type="email" id="email-address" name="email adress">
+                    <input type="email" id="email-address" name="email-address">
                 </div>
 
                 <!--Input field for password-->
@@ -41,7 +42,9 @@
                     <input type="password" id="passwword" name="password">
                 </div>
 
-                <button class="sign-in-button" type="submit" name="sign-in">Sign In</button>
+                <!--Adds a button to submit the log in form-->
+                <button class="sign-in-button" type="submit" name="tutor-sign-in">Sign In</button>
+                <!--Adds a link fot the tutor sign up if the user doesn't have an account-->
                 <p class="dont-have-an-account">Don't have an account? <a class="sign-link-redirect" href="sign-up-tutor.php">Sign Up</a></p>
             </form>
 

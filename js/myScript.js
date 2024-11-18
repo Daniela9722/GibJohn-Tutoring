@@ -16,6 +16,7 @@ function hideSidebar(){
     noSideBar.style.display = "none";
 }
 
+//Displays the correct image for the first benefit and hides the other images
 function benefit1(){
     const addImage = document.querySelector("#benefit-image-1");
     addImage.style.display = "flex";
@@ -30,6 +31,7 @@ function benefit1(){
     removeImage4.style.display = "none";
 }
 
+//Displays the correct image for the second benefit and hides other images
 function benefit2(){
     const removeImage1 = document.querySelector("#benefit-image-1");
     removeImage1.style.display = "none";
@@ -44,6 +46,7 @@ function benefit2(){
     removeImage4.style.display = "none";
 }
 
+//Displays the correct image for the third benefit and hides other images
 function benefit3(){
     const addImage = document.querySelector("#benefit-image-3");
     addImage.style.display = "flex";
@@ -58,6 +61,7 @@ function benefit3(){
     removeImage4.style.display = "none";
 }
 
+//Displays the correct image for the fourth benefit and hides other images
 function benefit4(){
     const addImage = document.querySelector("#benefit-image-4");
     addImage.style.display = "flex";

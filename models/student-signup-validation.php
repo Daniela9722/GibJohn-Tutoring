@@ -56,28 +56,6 @@ class StudentValidation{
         }
     }
 
-    //Checks if the email is already within the database
-    static function emailExist($str){
-
-        //Create a new object to make a connection with database
-        $db = new DatabaseConnection();
-        $conn = $db->connect();
-
-        //Prepares the statement
-        $sql = "SELECT email FROM students WHERE email = ?";
-        $stmt = $conn->prepare($sql);
-        //Executed the statement
-        $stmt->execute($str);
-
-        //Checks if it has returned more than 0 rows
-        if($stmt->rowCount() === 0){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-
     //Validates Password
     static function password($str){
         //Checks if the password consists of at least 8 characters from which at least
@@ -102,6 +80,21 @@ class StudentValidation{
         }
     }
 
+}
+
+class ExistingEmail{
+    private $db;
+
+    public function __construct(){
+        $this->db = new DatabaseConnection();
+    }
+
+    public function existingEmail($str){
+        $sql = "SELECT * FROM students WHERE email = ?";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->execute([$str]);
+        
+    }
 }
 
 ?>

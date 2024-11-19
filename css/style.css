@@ -739,37 +739,50 @@ focuses (clicks) on the input field*/
         color: white;
     }
 
+    /*Arrange the text in columns and increase gap between each of them*/
     #attract-users{
         flex-direction: column;
         gap: 1em;
     }
 
+    /*Change the size of the text*/
     #attract-users span{
         font-size: 1.5em;
     }
 
+    /*Set the beneift area to be displayed without the images affecting the layout*/
     #what-we-offer{
         display: inline;
     }
 
+    /*Prevent the image from beeing displayed*/
     #what-we-offer-img img{
         display: none;
     }
 
+    /*Customise the text*/
     #what-we-offer-text{
+        /*Increase the padding*/
         padding-top: 3em;
         padding-bottom: 3em;
+        /*Prevents an image from beeing displayed when benefit section is clicked on
+        and so affect the layout and responsiveness*/
         pointer-events: none;
+        /*Increase gap*/
         gap: 1.5em;
     }
 
+    /*Chnage the layout from row to column so that the benefit sections would be displayed vertically*/
     #what-we-offer-top,
     #what-we-offer-bottom{
         flex-direction: column;
+        /*Increase the gap between the benefit section gaps*/
         gap: 1.5em;
+        /*Center the boxes*/
         align-items: center;
     }
 
+    /*Change the size of the benefit sections*/
     .benefit-1,
     .benefit-2,
     .benefit-3,
@@ -778,17 +791,20 @@ focuses (clicks) on the input field*/
         height: 5em;
     }
 
+    /*Displays the text vertically and adds a gap betwen the texts and center it*/
     #footer-container{
         flex-direction: column;
         gap: 2em;
         text-align: center;
     }
 
+    /*Chnages the display from flex to inline so that the text would appear in single line*/
     #footer-link-list{
         display: inline;
         align-items: start;
     }
 
+    /*Displays the form and image vertically and increases the gap between them*/
     #sign-up-container,
     #sign-in-container{
         flex-direction: column;
@@ -802,6 +818,7 @@ focuses (clicks) on the input field*/
         height: 13em;
     }
 
+    /*Chnages the size of the sign in/up boxes*/
     .sign-up-choice div,
     .sign-in-choice div{
         height: 6em;
@@ -843,24 +860,29 @@ focuses (clicks) on the input field*/
         width: 13em;
     }
 
+    /*And a gap at the start and the end of the text*/
     #attract-users{
         justify-content: space-around;
     }
 
+    /*Increase the text size*/
     #attract-users span{
         font-size: 1.4em;
     }
 
+    /*Arrnages the benefit sections in column (vertically)*/
     #what-we-offer{
         flex-direction: column;
         gap: 1em;
     }
 
+    /*Customises the image size*/
     #what-we-offer-img img{
         width: 40em;
         height: 40em;
     }
 
+    /*Customises the benefit areas*/
     #what-we-offer-text{
         display: flex;
         flex-direction: column;
@@ -868,35 +890,44 @@ focuses (clicks) on the input field*/
         gap: 1.5em;
     }
 
+    /*Arranges the benefit areas vertically and adds a gap between them*/
     #what-we-offer-top,
     #what-we-offer-bottom{
         flex-direction: column;
         gap: 1.5em;
     }
 
+    /*Arranges the footer text into column (vertically)*/
     #footer-container{
         flex-direction: column;
+        /*Adds a gap*/
         gap: 2em;
+        /*Centers the text*/
         text-align: center;
     }
 
+    /*Changes the display form flex to inline for the links within the footer
+    so that they would be displayed better and align them to the start of the footer*/
     #footer-link-list{
         display: inline;
         align-items: start;
     }
 
+    /*Arrange the sign up/in boxes wvertically*/
     #sign-up-container,
     #sign-in-container{
         flex-direction: column;
         gap: 3em;
     }
 
+    /*Change the size of the images within the sign in and sign up option boxes*/
     #sign-up-container img,
     #sign-in-container img{
         width: 22em;
         height: 19em;
     }
 
+    /*Change the size of the sign in and sign up option boxes*/
     .sign-up-choice div,
     .sign-in-choice div{
         height: 7em;
@@ -916,25 +947,30 @@ focuses (clicks) on the input field*/
         display: none;
     }
 
+    /*Arrange the text so that it has same space between different texts*/
     #attract-users{
         justify-content: space-evenly;
         align-items: center;
     }
 
+    /*Chnage the size of the text*/
     #attract-users span{
         font-size: 1.4em;
     }
 
+    /*Arrange the image and benefit text areas vertically*/
     #what-we-offer{
         flex-direction: column;
         gap: 1em;
     }
 
+    /*Change the image size*/
     #what-we-offer-img img{
         width: 55em;
         height: 55em;
     }
 
+    /*Arranges the text within the benefit area in column abd increases the gap between them*/
     #what-we-offer-text{
         display: flex;
         flex-direction: column;
@@ -942,12 +978,14 @@ focuses (clicks) on the input field*/
         gap: 1.5em;
     }
 
+    /*Arranges the first two and the last two benefit sections in row (horiontally)*/
     #what-we-offer-top,
     #what-we-offer-bottom{
         flex-direction: row;
         gap: 1.5em;
     }
 
+    /*Changes teh size of the images*/
     .benefit-1,
     .benefit-2,
     .benefit-3,
@@ -956,18 +994,21 @@ focuses (clicks) on the input field*/
         height: 5em;
     }
 
+    /*Arranges the sign in and sign up options in column (vertically)*/
     #sign-up-container,
     #sign-in-container{
         flex-direction: column;
         gap: 3em;
     }
 
+    /*Chnages the size of the sign in and sign up images*/
     #sign-up-container img,
     #sign-in-container img{
         width: 34em;
         height: 31em;
     }
 
+    /*Changes the size of the sign in and sign up option container*/
     .sign-up-choice div,
     .sign-in-choice div{
         height: 7em;
@@ -988,16 +1029,19 @@ focuses (clicks) on the input field*/
 
 /*Changes design for even larger screen sizes, e.g., desktop*/
 @media only screen and (min-width: 1500px) and (max-width: 2099px){
+    /*Adds a same space between each text*/
     #attract-users{
         justify-content: space-evenly;
         align-items: center;
     }
 
+    /*Changes the size of the image*/
     #what-we-offer-img img{
         width: 53em;
         height: 53em;
     }
-
+    
+    /*Changes the size of the benefit areas*/
     .benefit-1,
     .benefit-2,
     .benefit-3,
@@ -1006,11 +1050,13 @@ focuses (clicks) on the input field*/
         height: 7em;
     }
 
+    /*Add the same space between the sign in and sign up containers (on the right and in the left)*/
     #sign-up-container,
     #sign-in-container{
         justify-content: space-evenly;
     }
 
+    /*Change the size of the sign in and sign up option images*/
     #sign-up-container img,
     #sign-in-container img{
         width: 25em;
@@ -1018,6 +1064,7 @@ focuses (clicks) on the input field*/
         flex: 1;
     }
 
+    /*Changes the size of the sign in and sign up container container*/
     .sign-up-choice div,
     .sign-in-choice div{
         height: 7em;
@@ -1025,6 +1072,7 @@ focuses (clicks) on the input field*/
         flex: 1;
     }
 
+    /*Adds a padding on the left*/
     .sign-container{
         padding-left: 2em;
     }

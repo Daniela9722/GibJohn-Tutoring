@@ -1,3 +1,7 @@
+<?php
+    include('../core/spec.php');
+    include_once("../model/student-validation.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +22,7 @@
     <div class="sign-container">
         <div class="sign-form">
             <div>
+                <!--Adds the logo-->
                 <a href="index.php"><img class="sign-logo" src="/static/202129597-removebg-preview.png" alt="Logo"></a>
             </div>
             <h1>Student Sign Up</h1>

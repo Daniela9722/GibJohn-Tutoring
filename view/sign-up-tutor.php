@@ -18,6 +18,7 @@
     <div class="sign-container">
         <div class="sign-form">
             <div>
+                <!--Adds a logo-->
                 <a href="index.php"><img class="sign-logo" src="/static/202129597-removebg-preview.png" alt="Logo"></a>
             </div>
             <h1>Tutor Sign Up</h1>

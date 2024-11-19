@@ -2,24 +2,25 @@
 
     class DatabaseConnection{
 
-        protected function connection(){
-            //Tries to run the code, however if it cathes an error it will display the error instead
+        //Get the values that are required to connect to the database
+        private $server = "localhost";
+        private $username = "root";
+        private $dbPassword = "";
+        private $dbName = "gibjohn tutoring";
+        //Variable to store the connection
+        private $conn;
+
+        //Makes connection
+        public function connect(){
+            $this->conn = null;
             try{
-                $username = "root";
-                $password = "";
-                //Using PDO provides higher level of security, and so protects from SQL injections
-                //Creates a connection with the database
-                $dbh = new PDO("mysql:host=localhost;dbname=gibjohn tutoring", $username, $password);
-                //Returns the connection if successful
-                return $dbh;
+                $this->conn = new PDO("mysql:host=".$this->server. ";dbname=".$this->dbName, $this->username, $this->dbPassword);
+                $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
-            //If the connection is unsuccessful it will get the error message and then display it.
-            catch(PDOException $error){
-                //getMessage function takes the error that the $error variable gets
-                //and the die function then kills the connection
-                print "Error!: " . $error->getMessage() . "<br/>";
-                die();
+            catch(PDOException $e){
+                echo "Connection error: ".$e->getMessage();
             }
+            return $this->conn;
         }
     }
 

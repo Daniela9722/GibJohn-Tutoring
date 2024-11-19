@@ -704,6 +704,11 @@ focuses (clicks) on the input field*/
     color: #165d89;
 }
 
+/*Customise error messages*/
+.error-message{
+    color: red;
+    font-weight: bold;
+}
 
 /************************* Responsive Design **************************/
 

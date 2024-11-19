@@ -1,6 +1,5 @@
 <?php
-    include('../core/spec.php');
-    include_once("../model/student-validation.php");
+    include('../models/student-signup-validation.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +25,16 @@
                 <a href="index.php"><img class="sign-logo" src="/static/202129597-removebg-preview.png" alt="Logo"></a>
             </div>
             <h1>Student Sign Up</h1>
+            <?php
+                if(isset($_GET['error'])){ 
+            ?>
+                    <p class="error-message"><?=StudentValidation::clean($_GET['error'])?></p>
+            <?php
+                } 
+            ?>
             <!--Uses post method to send user input to the php file more securely
             since the input will not appear on the search bar-->
-            <form class="sign-input-fields" action="../models/student-signup.php" method="post">
+            <form class="sign-input-fields" action="../models/student-signup.php" method="POST">
 
                 <!--Option to sign up with google-->
                 <button class="sign-google" style="submit">Sign Up with Google</button>

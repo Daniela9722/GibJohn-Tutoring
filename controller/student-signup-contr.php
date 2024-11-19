@@ -1,55 +1,32 @@
 <?php
 
-    class StudentSignupContr extends DatabaseConnection{
+    class StudentSignupContr{
+        private $table_name;
+        private $conn;
 
-        protected function signStudent($forename, $surname, $dateOfBirth, $email, $password){
-            //Prepare SQL statement
-            $stmt = $this->connection()->prepare('INSERT INTO students (forename, surname, dateOfBirth, email, password) VALUES (?, ?, ?, ?, ?');
+        private $studentID;
+        private $forename;
+        private $surname;
+        private $dateOfBirth;
+        private $email;
+        private $password;
 
-            //Hashes the password
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-            //Check if the SQL statement execution fales
-            if(!$stmt->execute(array($forename, $surname, $dateOfBirth, $email, $password))){
-                //Close the statement
-                $stmt = null;
-                //Return user to the homepage
-                header("location: ../view/index.php?error=stmtfailed");
-                exit();
-            }
-
-            //Close the statement
-            $stmt = null;
-
+        function __construct($db_conn){
+            $this->conn = $db_conn;
+            $this->table_name = "students";
         }
 
-        protected function checkStudent($email){
-            //Takes the connection that has been creatd in "connection.php" file and then it prepares 
-            //an SQL statement/code that neds to be run
-            //Use "?" instead of the variable "$email" (data) as it increases the security, and protects the software from SQL injections
-            $stmt = $this->connection()->prepare('SELECT email FROM students WHERE email = ?');
-
-            //Checks if the SQL statement execution fales
-            if(!$stmt->execute($email)){
-                //Close the statement (deletes the statement)
-                $stmt = null;
-                //Returns the user to the homepage
-                header("location: ../view/index.php?error=stmtfailed");
-                exit();
+        function insert($data){
+            try{
+                $sql = 'INSERT INTO ' . $this->table_name. '(forename, surname, dateOfBirth, email, password) VALUES(?, ?, ?, ?, ?)';
+                $stmt = $this->conn->prepare($sql);
+                $res = $stmt->execute($data);
+                return $res;
             }
-
-            //Empty variable to store results
-            $resultCheck;
-            //Counts the number of rows the statement above returned
-            if($stmt->row_count() > 0){
-                $resultCheck = false;
+            catch(PDOException $e){
+                return 0;
             }
-            else{
-                $resultCheck = true;
-            }
-
-            return $resultCheck;
         }
+
     }
-
 ?>

@@ -2,10 +2,16 @@
 
 class StudentValidation{
 
+    //Cleans the data received from the user to increase security of sql injections
     static function clean($str){
+        //Removes whitespaces or other pre-defined characters form
+        //both sides of the data
         $str = trim($str);
+        //Returns data with backslashes taken off "/"
         $str = stripcslashes($str);
+        //Converts special caharcters to HTML entities
         $str = htmlspecialchars($str);
+        //Returns the string
         return $str;
     }
 
@@ -80,21 +86,6 @@ class StudentValidation{
         }
     }
 
-}
-
-class ExistingEmail{
-    private $db;
-
-    public function __construct(){
-        $this->db = new DatabaseConnection();
-    }
-
-    public function existingEmail($str){
-        $sql = "SELECT * FROM students WHERE email = ?";
-        $stmt = $this->db->pdo->prepare($sql);
-        $stmt->execute([$str]);
-        
-    }
 }
 
 ?>

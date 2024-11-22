@@ -1,3 +1,6 @@
+<?php
+    include('../models/student-signup-validation.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +23,18 @@
                 <a href="index.php"><img class="sign-logo" src="/static/202129597-removebg-preview.png" alt="Logo"></a>
             </div>
             <h1>Student Sign In</h1>
+            <?php
+            //Checks if the error has been set (If the error message is present)
+                if(isset($_GET['error'])){ 
+            ?>
+                    <!--Cleans the error message for security, especially against sql injections-->
+                    <p class="error-message"><?=StudentValidation::clean($_GET['error'])?></p>
+            <?php
+                } 
+            ?>
             <!--Uses post method to send user input to the php file more securely
             since the input will not appear on the search bar-->
-            <form class="sign-input-fields" action="#" method="post">
+            <form class="sign-input-fields" action="../models/student-signin.php" method="POST">
 
                 <!--Option to sign up with google-->
                 <button class="sign-google" style="submit">Sign In with Google</button>

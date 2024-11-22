@@ -41,6 +41,55 @@
             }
         }
 
+        function auth($email, $password){
+            try{
+                $sql = "SELECT * FROM " . $this->table_name . " WHERE email = ?";
+                $stmt = $this->conn->prepare($sql);
+                $res = $stmt->execute([$email]);
+                if($stmt->$rowCount() == 1){
+                    $user = $stmt->fetch();
+                    $db_email = $user["email"];
+                    $db_password = $user["password"];
+                    $db_id = $user["id"];
+                    $db_forename = $user["forename"];
+                    $db_surname = $user["surname"];
+                    $db_date_of_birth = $user["dateOfBirth"];
+                    if($db_email === $email){
+                        if(password_verify($password, $db_password)){
+                            $this->email = $db_email;
+                            $this->password = $db_password;
+                            $this->studentID = $db_id;
+                            $this->forename = $db_forename;
+                            $this->surname = $db_surname;
+                            $this->dateOfBirth = $db_date_of_birth;
+                            return 1;
+                        }
+                        else{
+                            return 0;
+                        }
+                    }
+                    else{
+                        return 0;
+                    }
+                }
+                else{
+                    return 0;
+                }
+            }
+            catch(PDOException $e){
+                return 0;
+            }
+        }
+
+        function getStudent(){
+            $data = array("studentID" => $this->studentID,
+                        "forename" => $this->forename,
+                        "surname" => $this->surname,
+                        "dateOfBirth" => $this->dateOfBirth,
+                        "email" => $this->email);
+            return $data;
+        }
+
     }
 
     class ExistingEmail{

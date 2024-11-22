@@ -26,8 +26,10 @@
             </div>
             <h1>Student Sign Up</h1>
             <?php
+            //Checks if the error has been set (If the error message is present)
                 if(isset($_GET['error'])){ 
             ?>
+                    <!--Cleans the error message for security, especially against sql injections-->
                     <p class="error-message"><?=StudentValidation::clean($_GET['error'])?></p>
             <?php
                 } 

@@ -1,5 +1,4 @@
 <?php
-    include "../core/connection.php";
     //Includes the navigation
     require "nav.php";
 ?>

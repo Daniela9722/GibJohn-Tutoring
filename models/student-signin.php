@@ -1,5 +1,8 @@
 <?php
+    //Start session so that data can be stored and retrieved from 
+    //$_SESSION variable
     session_start();
+
     //Gets the files for the database connection, validation file, and database sql queries
     include "../core/connection.php";
     include "../models/student-signup-validation.php";

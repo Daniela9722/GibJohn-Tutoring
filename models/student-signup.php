@@ -95,7 +95,7 @@
                     //Checks if the data was stored successfully, if it returns true it will 
                     //redirect the user to the account page
                     if($res){
-                        header("Location: ../view/student-account.php");
+                        header("Location: ../view/sign-in-student.php");
                     }
                     //If the data couldn't be inserted within the database it will display an error to the user
                     //to make them aware of it (improved UI and UX)

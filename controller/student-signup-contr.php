@@ -6,7 +6,7 @@
         private $conn;
 
         //Set variables to store all the values from the table
-        private $studentID;
+        private $id;
         private $forename;
         private $surname;
         private $dateOfBirth;
@@ -46,7 +46,7 @@
                 $sql = "SELECT * FROM " . $this->table_name . " WHERE email = ?";
                 $stmt = $this->conn->prepare($sql);
                 $res = $stmt->execute([$email]);
-                if($stmt->$rowCount() == 1){
+                if($stmt->rowCount() == 1){
                     $user = $stmt->fetch();
                     $db_email = $user["email"];
                     $db_password = $user["password"];
@@ -58,7 +58,7 @@
                         if(password_verify($password, $db_password)){
                             $this->email = $db_email;
                             $this->password = $db_password;
-                            $this->studentID = $db_id;
+                            $this->id = $db_id;
                             $this->forename = $db_forename;
                             $this->surname = $db_surname;
                             $this->dateOfBirth = $db_date_of_birth;
@@ -82,7 +82,7 @@
         }
 
         function getStudent(){
-            $data = array("studentID" => $this->studentID,
+            $data = array("id" => $this->id,
                         "forename" => $this->forename,
                         "surname" => $this->surname,
                         "dateOfBirth" => $this->dateOfBirth,

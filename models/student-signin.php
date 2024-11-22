@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     //Gets the files for the database connection, validation file, and database sql queries
     include "../core/connection.php";
     include "../models/student-signup-validation.php";
@@ -44,11 +44,11 @@
             if($auth){
                 $studentData = $user->getStudent();
                 $_SESSION["email"] = $studentData["email"];
-                $_SESSION["studentId"] = $studentData["studentID"];
+                $_SESSION["id"] = $studentData["id"];
                 header("Location: ../view/student-account.php");
             }
             else{
-                $em = "Incorrect username or password";
+                $em = "*Incorrect email or password";
                 header("Location: ../view/sign-in-student.php?error=$em");
             }
         }

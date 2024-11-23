@@ -41,46 +41,65 @@
             }
         }
 
+        //Authenticates log in email and password
         function auth($email, $password){
+            //Tries to execute sql statement
             try{
+                //SQL statement that will nees to be executed
+                //Used "?" for higher security agains SQL injections
                 $sql = "SELECT * FROM " . $this->table_name . " WHERE email = ?";
+                //Prepares the statements and connection
                 $stmt = $this->conn->prepare($sql);
+                //Replaces the "?" with the email address
                 $res = $stmt->execute([$email]);
+                //Checks if at least one row is returned
                 if($stmt->rowCount() == 1){
+                    //Returns the results as associated array
                     $user = $stmt->fetch();
+                    //Assigns the extracted data values to variables
                     $db_email = $user["email"];
                     $db_password = $user["password"];
                     $db_id = $user["id"];
                     $db_forename = $user["forename"];
                     $db_surname = $user["surname"];
                     $db_date_of_birth = $user["dateOfBirth"];
+                    //Checks if the user entered email matches the database extracted email
                     if($db_email === $email){
+                        //Checks if the user enetered password in log in form
+                        //is the same as the hashed password stored in the table
                         if(password_verify($password, $db_password)){
+                            //Assigns the database extracted data to the above created variables
                             $this->email = $db_email;
                             $this->password = $db_password;
                             $this->id = $db_id;
                             $this->forename = $db_forename;
                             $this->surname = $db_surname;
                             $this->dateOfBirth = $db_date_of_birth;
+                            //Returns 1 for true
                             return 1;
                         }
+                        //Otherwise it will return 0
                         else{
                             return 0;
                         }
                     }
+                    //Otherwise it will return 0
                     else{
                         return 0;
                     }
                 }
+                //Otherwise it will return 0
                 else{
                     return 0;
                 }
             }
+            //If the sql statement couldn't be executed it will return 0
             catch(PDOException $e){
                 return 0;
             }
         }
 
+        //Places the information/data within an array
         function getStudent(){
             $data = array("id" => $this->id,
                         "forename" => $this->forename,
@@ -88,6 +107,29 @@
                         "dateOfBirth" => $this->dateOfBirth,
                         "email" => $this->email);
             return $data;
+        }
+
+        //Gets student data based on user id
+        function getStudentData($studentId) {
+            //Prepares sql statement
+            $stmt = $this->conn->prepare("SELECT forename, surname, dateOfBirth, email, password FROM students WHERE id = :id");
+            //Replaces ":id" with the student id
+            //The "PDO::PARAM_INT" converts the data to the intiger
+            $stmt->bindParam(':id', $studentId, PDO::PARAM_INT);
+            //Executes the statement
+            $stmt->execute();
+    
+            // Fetch the data as an associative array
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+            // Check if data exists
+            if ($result) {
+                //Returns the data
+                return $result;
+            } else {
+                //Gives an error if the data does not exist
+                throw new Exception("User not found!");
+            }
         }
 
     }

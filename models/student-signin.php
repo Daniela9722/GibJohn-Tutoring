@@ -42,15 +42,22 @@
             //Creates a new database execution
             $db = new DatabaseConnection();
             $conn = $db->connect();
+            //Creates a new object of a class and send the database connection to it
             $user = new StudentSignupContr($conn);
+            //Executes the authentication funtion
             $auth = $user->auth($email, $password);
+            //Check if the authentication was successful
             if($auth){
+                //Stores student data within a variable
                 $studentData = $user->getStudent();
+                //Assigns student email and id to session (used to identify user for a session)
                 $_SESSION["email"] = $studentData["email"];
                 $_SESSION["id"] = $studentData["id"];
+                //Redirects user to the account page
                 header("Location: ../view/student-account.php");
             }
             else{
+                //Returns and error if the email or password is incorrect
                 $em = "*Incorrect email or password";
                 header("Location: ../view/sign-in-student.php?error=$em");
             }

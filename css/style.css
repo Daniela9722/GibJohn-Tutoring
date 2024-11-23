@@ -712,26 +712,187 @@ focuses (clicks) on the input field*/
 
 /************************* Side Navigation ***************************/
 
+/*Customises navigation*/
 .side-nav{
     height: 100%;
     width: 13%;
     position: fixed;
     z-index: 100;
+    /*Places the navigation on the left side*/
     top: 0;
     left: 0;
-    background-color: #109bff;
+    /*Changes the background colour*/
+    background-color: #F5E4C0;
+    /*Hiddes overflow*/
     overflow-x: hidden;
     padding-top: 20px;
-}
-
-.side-nav a{
-    padding: 6px 6px 12px 23px;
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
+    /*Displays the elements within the navigation vertically*/
     display: flex;
     flex-direction: column;
+    /*Adds a gap between elements*/
+    gap: 1em;
+    /*Adds a right hand side shadow for the navigation*/
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.4);
+}
+
+/*Customises the navigation profile image and text*/
+.side-nav-user{
+    /*Displays them horizontally*/
+    display: flex;
+    flex-direction: row;
+    /*Adds a gap between the image and name*/
+    gap: 1em;
+    /*Adds a small padding on the left*/
+    padding-left: 1em;
+    /*Aligns them horizontally in the center*/
+    align-items: center;
+}
+
+.profile-pic{
+    /*Sets a diameter vertically and horizontally*/
+    width: 50px;
+    height: 50px;
+    /*Makes the image rounded*/
+    border-radius: 50%;
+    /* Ensures the image fits well */
+    object-fit: cover; 
+}
+
+/*Arranges the navigation list items vertically*/
+.side-nav-list{
+    display:flex;
+    flex-direction: column;
+}
+
+/*Customises the navigation item links*/
+.side-nav-list a{
+    /*Adds a padding all around the list links*/
+    padding: 10px 6px 10px 23px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    /*Makes the link text bold*/
     font-weight: bold;
+}
+
+/*Changes the background colour of the list link items once hovered*/
+.side-nav-list a:hover,
+.side-nav-list a.active{
+    background-color: #FFF3D0;
+}
+
+/************************* Profile Account ***************************/
+
+/*Places the profile container in the center*/
+.account-section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Arranges div sections in column (vertically) and adds a gap between them*/
+    flex-direction: column;
+    gap: 2em;
+}
+
+.account-container{
+    /*Changes the background colour of the profile info section*/
+    background-color: rgb(216, 216, 216);
+    /*Makes the container rounded*/
+    border-radius: 30px;
+    /*Adds a shadow around the container, and curves*/
+    filter: drop-shadow(8px 7px 3px rgb(185, 174, 174));
+    /*Adds a padding around the container elements*/
+    padding: 15px 20px;
+    /*Displays all the divs within vertically and adds a gap between them*/
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.profile-image img {
+    /*Sets a diameter vertically and horizontally*/
+    width: 90px;
+    height: 90px;
+    /*Makes the image rounded*/
+    border-radius: 50%;
+    /* Ensures the image fits well */
+    object-fit: cover; 
+    /*Adds a shadow around the image*/
+    filter: drop-shadow(8px 7px 3px rgb(185, 174, 174));
+}
+
+/*Arrange the items within the div horizontally and adds a gap between them*/
+.account-section-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7em;
+}
+
+/*Arrange the items within the div horizontally and adds a gap between them*/
+.account-section-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9.5em;
+}
+
+/*Arrange the items within the div horizontally and adds a gap between them*/
+.account-section-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16.5em;
+}
+
+/*Arranges the data and the label vertically and adds a gap between them*/
+.account-section-2-name,
+.account-section-2-email,
+.account-section-3-date{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/*Moves the password change link higher up*/
+.account-section-3-pass{
+    margin-bottom: 3em;
+}
+
+/*Customises the password change link*/
+.account-section-3-pass a{
+    text-decoration: none;
+    color: #109bff;
+    font-weight: bold;
+}
+
+/*Customises the data areas*/
+.account-section-2-name span,
+.account-section-2-email span,
+.account-section-3-date span{
+    background-color: rgb(177, 177, 177);
+    border-radius: 20px;
+    padding: 11px 16px;
+    font-weight: bold;
+}
+
+/*Customises the log out button*/
+.log-out{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(136, 5, 5);
+    /*To show that pressing the log out text will perform an action*/
+    cursor: pointer;
+}
+
+/*Arranges the upload and delete buttons horizontally and adds a gap between them*/
+.profile-actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8em;
 }
 
 

@@ -32,8 +32,8 @@
         </div>
         <!--Displays the navigation option list-->
         <div class="side-nav-list">
-            <a href="../view/student-account.php">Account</a>
-            <a href="#">Dashboard</a>
+            <a href="../view/student-account.php"><i class='bx bxs-user-account'></i>Account</a>
+            <a href="#"><i class='bx bxs-dashboard' ></i>Dashboard</a>
         </div>
     </div>
 </body>

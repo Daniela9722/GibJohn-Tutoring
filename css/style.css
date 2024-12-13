@@ -715,7 +715,7 @@ focuses (clicks) on the input field*/
 /*Customises navigation*/
 .side-nav{
     height: 100%;
-    width: 13%;
+    width: 8vw;
     position: fixed;
     z-index: 100;
     /*Places the navigation on the left side*/
@@ -834,6 +834,7 @@ focuses (clicks) on the input field*/
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 9.5em;
 }
 
@@ -842,6 +843,7 @@ focuses (clicks) on the input field*/
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 16.5em;
 }
 
@@ -892,7 +894,51 @@ focuses (clicks) on the input field*/
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.8em;
+    gap: 1.5em;
+}
+
+#upload-img{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #9FC9E7;
+}
+
+#change-image{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #9FC9E7;
+    font-size: 14px;
+}
+
+#delete-image{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(116, 19, 19);
+    background-color: white;
+    font-weight: 14px;
+}
+
+.bxs-user-account{
+    font-size: 20px;
 }
 
 

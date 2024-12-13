@@ -51,12 +51,13 @@
                 <div class="profile-actions">
                     <!--Enables the user to upload/update their profile image-->
                     <form action="../controller/upload-image.php" method="POST" enctype="multipart/form-data">
-                        <input type="file" name="profileImage" accept="image/jpeg, image/png, image/gif" required>
-                        <button type="submit" name="upload">Change Image</button>
+                        <input type="file" name="profileImage" accept="image/jpeg, image/png, image/gif" id="upload-image" hidden required>
+                        <label for="upload-image" id="upload-img">Choose Image</label>
+                        <button type="submit" name="upload" id="change-image">Change Image</button>
                     </form>
                     <!--Enables the user to delete their profile image-->
                     <form action="../controller/upload-image.php" method="POST">
-                        <button type="submit" name="delete">Delete Image</button>
+                        <button type="submit" name="delete" id="delete-image">Delete Image</button>
                     </form>
                 </div>
             </div>
